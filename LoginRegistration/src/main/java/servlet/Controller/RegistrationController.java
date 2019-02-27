@@ -35,7 +35,6 @@ public class RegistrationController {
 		mv.addObject("msg", "Registration Sucessfull");
 		return mv;
 	}
-	
 //	@RequestMapping("/registrationGet.htm")
 //	public ModelAndView registrationGet(HttpServletRequest req, HttpServletResponse res,@ModelAttribute("registrationPojo") RegistrationPojo poj) throws Exception {
 //		ModelAndView mv = new ModelAndView("Registration");

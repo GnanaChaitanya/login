@@ -10,8 +10,8 @@ import org.springframework.stereotype.Controller;
 
 import DatabaseDao.loginDao;
 @Controller
-public class LoginController{
-
+public class LoginController
+{
 	@RequestMapping("/login.htm")
 	public ModelAndView handleRequest(HttpServletRequest req, HttpServletResponse res,
 			@ModelAttribute("loginPojo") LoginPojo poj) throws Exception 
@@ -28,6 +28,7 @@ public class LoginController{
 		{
 			 System.out.println("going to home");
 			 mv = new ModelAndView("Home");
+			 mv.addObject("sam", UserName);
 		}
 		else
 		{
@@ -36,12 +37,9 @@ public class LoginController{
 		}
 		return mv;
 	}
-	
-	
 	@RequestMapping("/loginGet.htm")
 	public ModelAndView loginGet(HttpServletRequest req, HttpServletResponse res,@ModelAttribute("loginPojo") LoginPojo poj) throws Exception 
 	{
-	
 		ModelAndView mv=new ModelAndView("index");
 		return mv;
 	}
